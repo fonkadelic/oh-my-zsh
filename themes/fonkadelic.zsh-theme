@@ -9,4 +9,4 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[239]%}]%{$fg[red]%} ✘"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[239]%}]%{$fg[green]%} ✔"
 
-export LSCOLORS="gxfxbEaEBxxEhEhBaDaCaD"
+# export LSCOLORS="gxfxbEaEBxxEhEhBaDaCaD"
