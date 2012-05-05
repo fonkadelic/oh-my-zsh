@@ -1,12 +1,7 @@
 function precmd() {
-print -rP '%{$fg[yellow]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$reset_color%}'
+  print -rP '%{$fg[yellow]%}%~%{$reset_color%} $(git_super_status)'
 }
 
-PROMPT='%{$fg[green]%}❯❯ %{$reset_color%}' 
+if [ $SSH_CONNECTION ]; then SSH="%{$fg[red]%}%n@%m "; else SSH=""; fi
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[239]%}git:[%{$reset_color%}%{$fg[yellow]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[239]%}]%{$fg[red]%} ✘"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[239]%}]%{$fg[green]%} ✔"
-
-# export LSCOLORS="gxfxbEaEBxxEhEhBaDaCaD"
+PROMPT='$SSH%{$fg[green]%}❯❯%{$reset_color%} ' 
